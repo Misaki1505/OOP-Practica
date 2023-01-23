@@ -2,6 +2,9 @@ package com.example.oop
 
 fun main(args: Array<String>) {
     val myOven: Oven? = null
+    myOven?.turnOn()
+    myOven?.turnOff()
+    myOven?.cook(150)
 }
 
 interface Oven {
