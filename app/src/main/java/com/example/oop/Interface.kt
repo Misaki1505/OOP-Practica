@@ -1,7 +1,7 @@
 package com.example.oop
 
 fun main(args: Array<String>) {
-    val myOven: Oven = Bosch()
+    val myOven: Oven = getOven()
     myOven.turnOn()
     myOven.cook(150)
     myOven.turnOff()
@@ -29,4 +29,8 @@ class Bosch: Oven {
        println("Turning Off")
     }
 
+}
+
+fun getOven(): Oven {
+    return Bosch()
 }
