@@ -1,10 +1,10 @@
 package com.example.oop
 
 fun main(args: Array<String>) {
-    val myOven: Oven? = null
-    myOven?.turnOn()
-    myOven?.turnOff()
-    myOven?.cook(150)
+    val myOven: Oven = Bosch()
+    myOven.turnOn()
+    myOven.cook(150)
+    myOven.turnOff()
 }
 
 interface Oven {
@@ -15,4 +15,18 @@ interface Oven {
     fun cook(temp: Int) {
         println("Cooking at $temp degrees")
     }
+}
+
+class Bosch: Oven {
+    override val temperature = 180
+
+
+    override fun turnOn() {
+        println("Turning On")
+    }
+
+    override fun turnOff() {
+       println("Turning Off")
+    }
+
 }
